@@ -1,6 +1,10 @@
 #!/bin/bash
 sudo apt-get update -y
-sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php7-common php7-cli php7-fpm -y
+sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php unzip nginx python-software-properties -y
+sudo add-apt-repository ppa:nginx/stable -y
+apt upgrade -y
+sudo apt-get install nginx
+2>&1 nginx -V | tr -- - '\n' | grep _module
 iptables -I INPUT -p tcp --dport 22 -j ACCEPT
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
@@ -9,7 +13,7 @@ touch /var/log/nginx/error.log
 cd /etc/php5/cli
 sudo mv php.ini php.ini.backup
 sudo ln -s ../fpm/php.ini
-sudo service php5-fpm start 
+sudo service php5-fpm start
 sudo mkdir ~/working
 cd ~/working
 git clone git://github.com/upggr/nginx.git
