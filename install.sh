@@ -1,10 +1,15 @@
 #!/bin/bash
-sudo apt-get update -y
-sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php unzip nginx python-software-properties -y
 sudo add-apt-repository ppa:nginx/stable -y
-apt upgrade -y
-sudo apt-get install nginx
+sudo apt-get update -y
+sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php unzip python-software-properties -y
+sudo apt-get install nginx nginx-extras -y
 2>&1 nginx -V | tr -- - '\n' | grep _module
+
+cd /usr/src
+apt-get build-dep nginx
+apt-get source nginx
+
+
 iptables -I INPUT -p tcp --dport 22 -j ACCEPT
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
