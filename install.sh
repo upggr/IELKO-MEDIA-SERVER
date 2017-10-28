@@ -1,4 +1,20 @@
 #!/bin/bash
+mkdir ~/working
+cd ~/working
+git clone git://github.com/upggr/UPG.GR-MEDIA-SERVER.git
+
+
+wget https://awesome.nwgat.ninja/nginx-rtmp/nginx-common_1.10.1-0ubuntu1.2_all.deb
+wget https://awesome.nwgat.ninja/nginx-rtmp/nginx-full_1.10.1-0ubuntu1.2_amd64.deb
+dpkg -i nginx-full_1.10.1-0ubuntu1.2_amd64.deb nginx-common_1.10.1-0ubuntu1.2_all.deb
+apt-get install -f
+ufw allow 1935
+ufw allow 80
+wget https://awesome.nwgat.ninja/nginx-rtmp/rtmp.conf && cat rtmp.conf >> /etc/nginx/nginx.conf
+wget https://awesome.nwgat.ninja/nginx-rtmp/dash.conf -O /etc/nginx/sites-enabled/dash.conf
+
+
+
 sudo add-apt-repository ppa:nginx/stable -y
 sudo apt-get update -y
 sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php unzip python-software-properties -y
