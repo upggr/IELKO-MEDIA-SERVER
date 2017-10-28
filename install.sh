@@ -2,6 +2,7 @@
 sudo add-apt-repository ppa:mc3man/trusty-media -y
 sudo apt-get update -y
 sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev ffmpeg  libpcre3 git  software-properties-common php7.0-cli php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-opcache php-mbstring php7.0-mbstring php7.0-sybase libsybdb5 php-gettext -y
+#sudo apt-get install ffmpeg  -y
 mkdir ~/working
 mkdir ~/working/IELKO
 mkdir ~/working/nginx-rtmp-module
@@ -37,10 +38,8 @@ cp ~/working/IELKO/www/index.php /usr/local/nginx/html/index.php
 cp ~/working/IELKO/www/ielko-media-server.css /usr/local/nginx/html/ielko-media-server.css
 cp ~/working/IELKO/www/stream.xml /usr/local/nginx/html/stream.xml
 git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/player
-
-
-ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
-sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/conf/nginx.conf
+#ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
+#sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/conf/nginx.conf
 ln -s /usr/local/nginx/sbin/nginx nginx
 sudo service nginx start
 sudo rm -rf ~/working
