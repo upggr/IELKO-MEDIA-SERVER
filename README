@@ -1,9 +1,13 @@
 Media server - wowza & nimble killer :)
 
-Run the following commands on a freshly installed Ubuntu 14 or 15 Server on digital ocean
+Run the following commands on a freshly installed Ubuntu 16 Server on digital ocean
+
 sudo -s
 apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
+
+
+++++ usefull commands ++++
 
 Test the configuration file
 /usr/local/nginx/sbin/nginx -t
