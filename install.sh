@@ -23,6 +23,7 @@ cd ~/working/nginx
 make -j 2
 sudo make install
 cp ~/working/IELKO/conf/nginx.conf /usr/local/nginx/conf/nginx.conf
+cp ~/working/IELKO/conf/nginx.service /etc/init.d/nginx
 ufw allow 8080
 ufw allow 80
 ufw allow 1935
