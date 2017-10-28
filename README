@@ -5,5 +5,19 @@ sudo -s
 apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
 
-There is a daily cron for this.
+Test the configuration file
+/usr/local/nginx/sbin/nginx -t
+
+Start nginx in the background
+/usr/local/nginx/sbin/nginx
+
+Start nginx in the foreground
+/usr/local/nginx/sbin/nginx -g 'daemon off;'
+
+Reload the config on the go
+/usr/local/nginx/sbin/nginx -t && nginx -s reload
+
+Kill nginx
+/usr/local/nginx/sbin/nginx -s stop
+
 
