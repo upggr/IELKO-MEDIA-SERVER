@@ -42,7 +42,7 @@
                   sdposterurl="testing.png"
                   hdposterurl="testing.png"
                   genre1=""
-                  url="http://localhost/hls/stream4.m3u8"
+                  url="http://192.168.1.99:8080/stream4.m3u8"
                   ishd="true"
                   bitrate="512"
                   streamformat="hls"
