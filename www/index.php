@@ -30,12 +30,11 @@ foreach($item as $item2) {
 	$imgurl = $item2->attributes()->hdposterurl;
 	$hlsurl = $item2->attributes()->url;
 echo "<li><a href='player/play.html?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
+echo "<li><a href='player/play.php?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live protected</p></a></li>";
 }
 }
 ?>
-<li>
-<a href='player/play.php?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a>";
-</li>
+
     </ul>
         </div>
 </div>
