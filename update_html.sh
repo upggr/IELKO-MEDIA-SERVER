@@ -12,5 +12,5 @@ git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/play
 
 ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
 sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/stream.xml
-sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/conf/nginx.conf
+#sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/conf/nginx.conf
 sudo rm -rf ~/working
