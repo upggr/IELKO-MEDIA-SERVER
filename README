@@ -28,7 +28,7 @@ Location of html
 /usr/local/nginx/html
 
 Update player
-cd /usr/local/nginx/html
+cd /usr/local/nginx/html/player
 git pull
 
 nginx.conf
