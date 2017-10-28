@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Greek TV by UPG.GR</title>
+<title>IELKO MEDIA SERVER</title>
 <meta property="og:title" content="UPG.GR Media Streamer" />
-<meta property="og:description" content="The dead easy media streamer by UPG.GR" />
+<meta property="og:description" content="The dead easy media streamer by IELKO" />
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <link rel="stylesheet" href="ielko-media-server.css">
@@ -15,7 +15,7 @@
 <body>
 <div data-role="page" data-theme="b" id="demo-page" class="my-page" data-url="demo-page">
   <div data-role="header">
-    <h1>UPG.GR Media Streamer - <a href="vlc.m3u">VLC Playlist</a> - <a href="/stat">Statistics</a></h1>
+    <h1>IELKO Media Streamer</h1>
         </div>
 
   <div role="main" class="ui-content">
