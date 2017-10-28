@@ -33,7 +33,7 @@ iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 rm /usr/local/nginx/html/*
-git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/
+git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/player
 
 
 ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
