@@ -8,7 +8,7 @@
                sdposterurl="pkg:/images/sdvideos.png"
                hdposterurl="pkg:/images/hdvideos.png">
       <item type="video"
-                  title="Parliament"
+                  title="Stream 1"
                   sdposterurl="testing.png"
                   hdposterurl="testing.png"
                   genre1=""
