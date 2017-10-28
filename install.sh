@@ -24,6 +24,8 @@ make -j 2
 sudo make install
 cp ~/working/IELKO/conf/nginx.conf /usr/local/nginx/conf/nginx.conf
 cp ~/working/IELKO/conf/nginx.service /etc/init.d/nginx
+sudo chmod +x /etc/init.d/nginx
+sudo /usr/sbin/update-rc.d -f nginx defaults
 ufw allow 8080
 ufw allow 80
 ufw allow 1935
