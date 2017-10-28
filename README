@@ -3,14 +3,7 @@ Media server - wowza , nimble killer :)
 Run the following commands on a freshly installed Ubuntu 14 or 15 Server on digital ocean
 sudo -s
 apt-get install curl -y
-curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install_new.sh | sudo bash -
+curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
 
-
-If port 80 is not available for the wan and you want to NAT it, try this :
-curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/nginx-8088.sh | sudo bash -
-This will use port 8088 for all the video references. This way you can have your LAN server on 80 and point wan from 8088 to 80
-
-
-If you need to get the latest version of the interface run : /etc/cron.daily/refreshwww
 There is a daily cron for this.
 
