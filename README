@@ -31,5 +31,8 @@ Update player
 cd /usr/local/nginx/html/player
 git pull
 
-nginx.conf
+edit nginx.conf
 nano /usr/local/nginx/conf/nginx.conf
+
+Update www directory with new default values and player
+curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html.sh | sudo bash -
