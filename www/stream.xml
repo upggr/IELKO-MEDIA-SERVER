@@ -12,7 +12,7 @@
                   sdposterurl="testing.png"
                   hdposterurl="testing.png"
                   genre1=""
-                  url="http://localhost/hls/stream1.m3u8"
+                  url="http://streamer-cache.grnet.gr/parliament/hls/webtv.m3u8"
                   ishd="true"
                   bitrate="512"
                   streamformat="hls"
