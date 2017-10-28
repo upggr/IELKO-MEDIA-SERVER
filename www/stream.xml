@@ -8,7 +8,7 @@
                sdposterurl="pkg:/images/sdvideos.png"
                hdposterurl="pkg:/images/hdvideos.png">
       <item type="video"
-                  title="Stream 1"
+                  title="Parliament"
                   sdposterurl="testing.png"
                   hdposterurl="testing.png"
                   genre1=""
@@ -42,22 +42,11 @@
                   sdposterurl="testing.png"
                   hdposterurl="testing.png"
                   genre1=""
-                  url="http://192.168.1.99:8080/stream4.m3u8"
+                  url="http://192.168.1.99:8080/stream.m3u8"
                   ishd="true"
                   bitrate="512"
                   streamformat="hls"
                   live="true"></item>
-          <item type="video"
-                  title="Stream 5 (Test Stream)"
-                  sdposterurl="testing.png"
-                  hdposterurl="testing.png"
-                  genre1=""
-                  url="http://megahdlive1-f.akamaihd.net/i/live_1@105260/master.m3u8"
-                  ishd="true"
-                  bitrate="512"
-                  streamformat="hls"
-                  live="true"></item>
-
     </item>
   </channel>
 </orml>
