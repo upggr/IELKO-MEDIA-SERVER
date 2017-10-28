@@ -29,7 +29,7 @@ foreach($item as $item2) {
 	$title = $item2->attributes()->title;
 	$imgurl = $item2->attributes()->hdposterurl;
 	$hlsurl = $item2->attributes()->url;
-echo "<li><a href='upgplayer.php?m3u8=".$hlsurl."&poster=".$imgurl."&type=hls&channel=".$title."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
+echo "<li><a href='player/play.html?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
 }
 }
 ?>
