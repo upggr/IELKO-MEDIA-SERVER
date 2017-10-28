@@ -7,6 +7,16 @@ apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
 
 
+++++ receiving streams ++++
+Stream to rtmp://ipofyourserver/show/streamname
+
+
+++++ retrieving streams ++++
+your hls address is : http://ipofyourserver:8080/streamname.m3u8
+you can test your stream from http://ipofyourserver/player/play.php?play=http://ipofyourserver:8080/streamname.m3u8
+or you can just visit http://ipofyourserver for sample links to streams : stream1,stream2,stream3,stream4,stream5
+
+
 ++++ usefull commands ++++
 
 Test the configuration file
