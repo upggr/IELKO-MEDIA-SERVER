@@ -16,10 +16,11 @@ your hls address is : http://ipofyourserver:8080/hls/stream1.m3u8
 you can test your stream from http://ipofyourserver/player/play.php?play=http://ipofyourserver:8080/hls/stream1.m3u8
 or you can just visit http://ipofyourserver for sample links to streams : stream1,stream2,stream3,stream4
 
-++++ restream from your server ++++
-restream a youtube video to http://ipofyourserver:8080/hls/stream1.m3u8 : 
+++++ restream from your server another stream ++++
+restream a youtube video to http://ipofyourserver:8080/hls/stream1.m3u8 :
 ffmpeg -re -i `livestreamer  https://www.youtube.com/watch?v=qRY56sJJ2to best --stream-url --yes-run-as-root`  -c:v copy -ar 44100 -ab 128k -ac 2 -strict -2 -f flv rtmp://ipofyourserver/show/stream1
 
+for non youtube streams ommmit the livestreamer command and put an rtmp, for m3u8 use livestreamer.
 
 ++++ usefull commands ++++
 
