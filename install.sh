@@ -34,6 +34,7 @@ iptables -I INPUT -p tcp --dport 1935 -j ACCEPT
 iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
 rm /usr/local/nginx/html/*
 cp ~/working/IELKO/www/index.php /usr/local/nginx/html/index.php
+cp ~/working/IELKO/www/ielko-media-server.css /usr/local/nginx/html/ielko-media-server.css
 git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/player
 
 

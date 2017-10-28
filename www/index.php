@@ -8,7 +8,7 @@
 <meta property="og:description" content="The dead easy media streamer by UPG.GR" />
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<link rel="stylesheet" href="listview-grid.css">
+<link rel="stylesheet" href="ielko-media-server.css">
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
