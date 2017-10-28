@@ -3,7 +3,7 @@ Media server - wowza , nimble killer :)
 Run the following commands on a freshly installed Ubuntu 14 or 15 Server on digital ocean
 sudo -s
 apt-get install curl -y
-curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/nginx.sh | sudo bash -
+curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install_new.sh | sudo bash -
 
 
 If port 80 is not available for the wan and you want to NAT it, try this :
