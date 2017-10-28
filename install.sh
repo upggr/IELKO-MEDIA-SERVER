@@ -1,4 +1,25 @@
 #!/bin/bash
+mkdir ~/working
+mkdir ~/working/IELKO
+mkdir ~/working/nginx-rtmp-module
+mkdir ~/working/ngx_devel_kit
+mkdir ~/working/set-misc-nginx-module
+mkdir ~/working/nginx
+mkdir ~/working/nginx-hmac-secure-link
+git clone https://github.com/upggr/IELKO-MEDIA-SERVER.git ~/working/IELKO
+git clone https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git ~/working/nginx-rtmp-module
+git clone https://github.com/openresty/set-misc-nginx-module.git ~/working/set-misc-nginx-module
+git clone https://github.com/simpl/ngx_devel_kit.git ~/working/ngx_devel_kit
+git clone https://github.com/nginx-modules/nginx-hmac-secure-link.git ~/working/nginx-hmac-secure-link
+sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
+wget http://nginx.org/download/nginx-1.13.6.tar.gz -P ~/working
+tar -xf ~/working/nginx-1.13.6.tar.gz -C ~/working/nginx --strip-components=1
+cd ~/working/nginx
+./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module --add-module=../nginx-hmac-secure-link
+make -j 1
+sudo make install
+
+
 sudo apt-get update -y
 sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php5-common php5-cli php5-fpm -y
 iptables -I INPUT -p tcp --dport 22 -j ACCEPT
