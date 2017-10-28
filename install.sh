@@ -16,7 +16,8 @@ wget http://nginx.org/download/nginx-1.13.6.tar.gz -P ~/working
 tar -xf ~/working/nginx-1.13.6.tar.gz -C ~/working/nginx --strip-components=1
 rm ~/working/nginx-1.13.6.tar.gz
 cd ~/working/nginx
-./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module --add-module=../nginx-hmac-secure-link
+#./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module --add-module=../nginx-hmac-secure-link
+./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module 
 make -j 1
 sudo make install
 
