@@ -1,6 +1,6 @@
 Media server - wowza & nimble killer :)
 
-Run the following commands on a freshly installed Ubuntu 16 Server on digital ocean
+Run the following commands on a freshly installed Ubuntu 16 Server on digital ocean or elsewhere
 
 sudo -s
 apt-get install curl -y
