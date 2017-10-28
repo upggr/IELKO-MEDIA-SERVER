@@ -20,4 +20,12 @@ Reload the config on the go
 Kill nginx
 /usr/local/nginx/sbin/nginx -s stop
 
+Location of html
+/usr/local/nginx/html
 
+Update player
+cd /usr/local/nginx/html
+git pull
+
+nginx.conf
+nano /usr/local/nginx/conf/nginx.conf
