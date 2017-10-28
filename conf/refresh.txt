@@ -1,9 +1,0 @@
-#!/bin/bash
-sudo mkdir ~/working
-cd ~/working
-sudo git clone git://github.com/upggr/UPG.GR-MEDIA-SERVER.git
-cp -a ~/working/UPG.GR-MEDIA-SERVER/www/. /usr/local/nginx/html
-ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
-sudo sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/vlc.m3u
-sudo sed -i -- 's/localhost/'"$ip"'/g' /usr/local/nginx/html/stream.xml
-sudo rm -rf ~/working
