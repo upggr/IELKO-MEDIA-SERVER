@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo add-apt-repository ppa:mc3man/trusty-media -y
 sudo apt-get update -y
-sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev  libpcre3 git  software-properties-common php7.0-cli php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-opcache php-mbstring php7.0-mbstring php7.0-sybase libsybdb5 php-gettext -y
+sudo apt-get install livestreamer build-essential libpcre3 libpcre3-dev libssl-dev  libpcre3 git  software-properties-common php7.0-cli php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-opcache php-mbstring php7.0-mbstring php7.0-sybase libsybdb5 php-gettext -y
 #sudo apt-get install ffmpeg  -y
 mkdir ~/working
 mkdir ~/working/IELKO
