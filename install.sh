@@ -17,10 +17,10 @@ tar -xf ~/working/nginx-1.13.6.tar.gz -C ~/working/nginx --strip-components=1
 rm ~/working/nginx-1.13.6.tar.gz
 cd ~/working/nginx
 #./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module --add-module=../nginx-hmac-secure-link
-./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module 
-make -j 1
+./configure --with-http_ssl_module --add-module=../nginx-rtmp-module --add-module=../ngx_devel_kit --add-module=../set-misc-nginx-module
+make -j 2
 sudo make install
-
+cp ~/working/IELKO/conf/nginx.conf /usr/local/nginx/conf/nginx.conf
 
 sudo apt-get update -y
 sudo apt-get install build-essential libpcre3 git libpcre3-dev libssl-dev software-properties-common php5-common php5-cli php5-fpm -y
