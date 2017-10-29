@@ -42,6 +42,7 @@ cp ~/working/IELKO/www/favicon.ico /usr/local/nginx/html/favicon.ico
 git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/player
 ip=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )
 sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/stream.xml
+sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/index.php
 #
 ln -s /usr/local/nginx/sbin/nginx nginx
 sudo service nginx start
