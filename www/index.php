@@ -29,12 +29,12 @@ function buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp)
     $md5 = base64_encode($md5);
     $md5 = strtr($md5, '+/', '-_');
     $md5 = str_replace('=', '', $md5);
-    return $path . '?md5=' . $md5 . '&expires=' . $expires;
+    return $baseUrl . $path . '?md5=' . $md5 . '&expires=' . $expires;
 }
 
 $secret = 'IELKO';  //This is the secret configured at nginx.conf
 $baseUrl = 'http://replaceip'; //this is your website that the content will be played from (replace replaceip with your domain name)
-$path = 'http://replaceip:8080/hls/stream4.m3u8'; //this is the stream url (replace replaceip with your domain name)
+$path = '/hls/stream4.m3u8'; //this is the stream url (replace replaceip with your domain name)
 $ttl = 120;
 $secure_stream4 = buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp);
 
