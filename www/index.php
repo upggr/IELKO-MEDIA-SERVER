@@ -23,7 +23,7 @@
       <?php
 
 function buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp)
-{
+{ 
     $expires = time() + $ttl;
     $md5 = md5("$expires$path$userIp $secret", true);
     $md5 = base64_encode($md5);
