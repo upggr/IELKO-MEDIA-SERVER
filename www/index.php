@@ -21,6 +21,23 @@
   <div role="main" class="ui-content">
     <ul data-role="listview" data-inset="true">
       <?php
+ 
+function buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp)
+{
+    $expires = time() + $ttl;
+    $md5 = md5("$expires$path$userIp $secret", true);
+    $md5 = base64_encode($md5);
+    $md5 = strtr($md5, '+/', '-_');
+    $md5 = str_replace('=', '', $md5);
+    return $baseUrl . $path . '?md5=' . $md5 . '&expires=' . $expires;
+}
+
+$secret = 'IELKO';  //This is the secret configured at nginx.conf
+$baseUrl = 'http://replaceip'; //this is your website that the content will be played from (replace replaceip with your domain name)
+$path = 'http://replaceip:8080/hls/stream1.m3u8'; //this is the stream url (replace replaceip with your domain name)
+$ttl = 120;
+$secure_stream5 = buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp);
+
 $url    = "stream.xml";
 $result = file_get_contents($url);
 $xml = new SimpleXMLElement($result);
@@ -32,6 +49,8 @@ foreach($item as $item2) {
 echo "<li><a href='player/play.html?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
 }
 }
+echo "<li><a href='player/play.html?play=".$secure_stream5."' target='_blank'><img src='testing.png' class='ui-li-thumb'><h2>Secure Stream 5</h2><p>Secure Stream 5</p><p class='ui-li-aside'>Watch Live</p></a></li>";
+
 ?>
 
     </ul>
