@@ -36,6 +36,7 @@ $secret = 'IELKO';  //This is the secret configured at nginx.conf
 $baseUrl = 'http://replaceip'; //this is your website that the content will be played from (replace replaceip with your domain name)
 $path = '/hls/stream4.m3u8'; //this is the stream url (replace replaceip with your domain name)
 $ttl = 120;
+$userIp = $_SERVER['REMOTE_ADDR'];
 $secure_stream4 = buildSecureLink($baseUrl, $path, $secret, $ttl, $userIp);
 
 $url    = "stream.xml";
