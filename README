@@ -8,7 +8,7 @@ curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/insta
 
 
 ++++ receiving streams ++++
-Stream to rtmp://ipofyourserver/show/stream1   (or any other streamname other than stream1)
+Stream to rtmp://ipofyourserver/hls/stream1   (or any other streamname other than stream1)
 
 
 ++++ retrieving streams ++++
