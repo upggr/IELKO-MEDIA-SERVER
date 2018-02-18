@@ -10,7 +10,7 @@ cp ~/working/IELKO/www/testing.png /usr/local/nginx/html/testing.png
 cp ~/working/IELKO/www/favicon.ico /usr/local/nginx/html/favicon.ico
 git clone https://github.com/upggr/ielko-video-player /usr/local/nginx/html/player
 
-ip=$1
+read -p 'domain name (for example stream.yourdomain.com): ' ip
 sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/stream.xml
 sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/html/index.php
 #sed -i -- 's/replaceip/'"$ip"'/g' /usr/local/nginx/conf/nginx.conf
