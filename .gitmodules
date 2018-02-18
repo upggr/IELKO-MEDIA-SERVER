@@ -1,0 +1,3 @@
+[submodule "www/domain-player"]
+	path = www/domain-player
+	url = git@github.com:upggr/ielko-video-player.git
