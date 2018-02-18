@@ -51,8 +51,8 @@ nano /usr/local/nginx/conf/nginx.conf
 Update www directory with new default values and player
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html.sh | sudo bash -
 
-Update www directory with new default values and player using a custom domain!
-curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html_custom_domain.sh yourdomain.com | sudo bash -
+Update www directory with new default values and player using a custom domain (you will be asked for the domain in the script)!
+curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html_custom_domain.sh | sudo bash -
 
 
 ++++ use domain name ++++
