@@ -6,7 +6,7 @@ sudo -s
 apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
 
- 
+
 ++++ receiving streams ++++
 Stream to rtmp://ipofyourserver/show/stream1   (or any other streamname other than stream1)
 
@@ -18,8 +18,7 @@ or you can just visit http://ipofyourserver for sample links to streams : stream
 
 ++++ restream from your server another stream ++++
 restream a youtube video to http://ipofyourserver:8080/hls/stream1.m3u8 :
-ffmpeg -re -i `livestreamer  https://www.youtube.com/watch?v=qRY56sJJ2to best --stream-url --yes-run-as-root`  -c:v copy -ar 44100 -ab 128k -ac 2 -strict -2 -f flv rtmp://ipofyourserver/show/stream1
-
+ffmpeg -re -i `youtube-dl  --get-url https://www.youtube.com/watch?v=qRY56sJJ2to `  -c:v copy -ar 44100 -ab 128k -ac 2 -strict -2 -f flv rtmp://ipofyourserver/hls/stream1
 for non youtube streams ommmit the livestreamer command and put an rtmp, for m3u8 use livestreamer.
 
 ++++ usefull commands ++++
