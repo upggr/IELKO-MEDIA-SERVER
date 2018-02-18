@@ -51,6 +51,10 @@ nano /usr/local/nginx/conf/nginx.conf
 Update www directory with new default values and player
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html.sh | sudo bash -
 
+Update www directory with new default values and player using a custom domain!
+curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/update_html_custom_domain.sh yourdomain.com | sudo bash -
+
+
 ++++ use domain name ++++
 just nano /usr/local/nginx/conf/nginx.conf
 Replace line : "#server_name yourdomain.com www.yourdomain.com xxx.xxx.xxx.xxx" with your domain name or ip etc (and remove the #) :)
