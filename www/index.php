@@ -45,7 +45,7 @@ $xml = new SimpleXMLElement($result);
 foreach($xml->channel->item as $item) {
 foreach($item as $item2) {
 	$title = $item2->attributes()->title;
-	$imgurl = $item2->attributes()->hdposterurl;
+	$imgurl = $item2->attributes()->hdposterurl; 
 	$hlsurl = $item2->attributes()->url;
 echo "<li><a href='domain-player/play.html?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
 }
