@@ -50,7 +50,7 @@ foreach($item as $item2) {
 echo "<li><a href='player/play.html?play=".$hlsurl."' target='_blank'><img src='".$imgurl."' class='ui-li-thumb'><h2>".$title."</h2><p>".$title."</p><p class='ui-li-aside'>Watch Live</p></a></li>";
 }
 }
-echo "<li><a href='player/play.html?play=".$secure_stream4."' target='_blank'><img src='testing.png' class='ui-li-thumb'><h2>Secure Stream 4</h2><p>Secure Stream 4</p><p class='ui-li-aside'>Watch Live</p></a></li>";
+echo "<li><a href='player/play.html?play=".$secure_stream4."' target='_blank'><img src='testing.png' class='ui-li-thumb'><h2>Secure Stream 4</h2><p>Secure Stream 5</p><p class='ui-li-aside'>Watch Live</p></a></li>";
 
 ?>
 
