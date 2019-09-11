@@ -1,8 +1,9 @@
-Media server - wowza & nimble killer :)
+Media server
 
 Run the following commands on a freshly installed Ubuntu 16 Server on digital ocean or elsewhere
 
 sudo -s
+sudo apt install libc6-dev
 apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/upggr/IELKO-MEDIA-SERVER/master/install.sh | sudo bash -
 
